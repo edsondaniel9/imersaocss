@@ -1,11 +1,44 @@
+/* Reset do CSS - Soft reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body{
-    background-image: url('../image.jpg');
+    background-image: url('../img/fundo.jpg');
     background-size: auto auto;
     font-family: Arial;
+    font-size: 12px;
+}
+
+/* se a tela tiver pelo menos 400px vai carregar esses estilos */
+@media (min-width: 400px) {
+    body{
+        font-size: 14px;
+    }
+}
+
+/* Breakpoints */
+@media (min-width: 600px) {
+    body{
+        font-size: 18px;
+    }
+}
+
+header {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
 }
 
 .menu{
     background-color: white;
+    position: fixed;
+    top: 0;
+    width: 100vw;
 }
 
 .menu ul{
@@ -32,6 +65,20 @@ a:hover{
     text-align: center;
 }
 
+.site-title {
+    font-size: 4em;
+}
+
 .subtitle{
     font-style: italic;
+}
+
+.img-portfolio {
+    height: 180px;
+    width: 180px;
+}
+
+.menu a {
+    display: block;
+    padding: 10px 40px;
 }
