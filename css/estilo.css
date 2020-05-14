@@ -1,4 +1,13 @@
 /* Reset do CSS - Soft reset */
+
+/*
+Fonts
+font-family: 'Gloria Hallelujah', cursive;
+font-family: 'Press Start 2P', cursive;
+font-family: 'Roboto', sans-serif;
+font-family: 'Source Code Pro', monospace;
+*/
+
 * {
     margin: 0;
     padding: 0;
@@ -7,8 +16,8 @@
 
 body{
     background-image: url('../img/fundo.jpg');
-    background-size: auto auto;
-    font-family: Arial;
+    background-size: cover;
+    font-family: 'Source Code Pro', monospace;
     font-size: 12px;
 }
 
@@ -31,7 +40,6 @@ header {
     display: flex;
     justify-content: center;
     align-items: center;
-
 }
 
 .menu{
@@ -65,17 +73,83 @@ a:hover{
     text-align: center;
 }
 
+.title-box {
+    /* Opacidade para o fundo*/
+    background-color: rgba(0,0,0, 0.5);
+    /* border: 0px solid #f1f1f1;*/
+
+    /* Alinhamento */
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    height: 100vh;
+    width: 100vw;
+}
+
 .site-title {
     font-size: 4em;
+    font-family: 'Source Code Pro', monospace;
+    /*font-family: 'Gloria Hallelujah', cursive;*/
 }
 
 .subtitle{
     font-style: italic;
 }
 
+.portifolio h2 {
+    font-family: 'Press Start 2P', cursive;
+    font-size: 2em;
+    color: whitesmoke;
+    margin-bottom: 1.5em;
+}
+
+.portifolio {
+    background-color: rgba(31, 34, 43, 0.212);
+    color: whitesmoke;
+    height: 100vh;
+    /*margin-top: 0.5em;
+    margin-bottom: 0.5em;*/
+    padding: 2em;
+}
+
+.portifolio .grid {
+    display: grid;
+    gap: 2em;
+}
+
+@media (min-width: 560px) {
+    .portifolio .grid {
+        grid-template-columns: 240px 240px;
+    }
+}
+
+@media (min-width: 880px) {
+    .portifolio .grid {
+        grid-template-columns: repeat(3, 260px);
+        align-content: center;
+        justify-content: center;
+        height: calc(100vh - 4em -48px -1.5em);
+    }
+}
+
+.portifolio figure{
+    text-align: center;
+}
+
 .img-portfolio {
     height: 180px;
-    width: 180px;
+    width: 240px;
+    object-fit: cover;
+    object-position: left bottom;
+    border-radius: 2%;
+}
+
+@media (min-width: 1000px) {
+    .img-portfolio {
+        height: 220px;
+        width: 280px;
+    }
 }
 
 .menu a {
