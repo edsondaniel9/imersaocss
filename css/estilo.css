@@ -15,8 +15,6 @@ font-family: 'Source Code Pro', monospace;
 }
 
 body{
-    background-image: url('../img/fundo-b.jpg');
-    background-size: cover;
     background-color: whitesmoke;
     font-family: 'Source Code Pro', monospace;
     font-size: 12px;
@@ -45,7 +43,6 @@ header {
     align-items: center;
 }
 
-
 .title-box {
     /* Opacidade para o fundo*/
     background-color: rgba(0,0,0, 0.4);
@@ -60,12 +57,12 @@ header {
     width: 100vw;
 }
 
-
 .menu{
     background-color: white;
     position: fixed;
     top: 0;
     width: 100vw;
+    z-index: 1;
 }
 
 .menu ul{
@@ -82,6 +79,7 @@ a{
     text-decoration: none;
 }
 
+a:active,
 a:hover{
     text-decoration: underline;
 }
@@ -90,6 +88,38 @@ a:hover{
 .site-title {
     color: whitesmoke;
     text-align: center;
+}
+
+.site-title{
+    animation: linear 400ms animacaoTitulo forwards;
+}
+
+.site-subtitle{
+    animation: linear 500ms animacaoSubTitulo forwards;
+}
+
+@keyframes animacaoTitulo {
+    0%{
+        transform: scale(0.8) translatex(60vh);
+        opacity: 0;
+    }
+
+    100% {
+        transform: scale(1) translatey(0);
+        opacity: 1;
+    }
+}
+
+@keyframes animacaoSubTitulo {
+    0%{
+        transform: scale(0.8) translatex(-60vh);
+        opacity: 0;
+    }
+
+    100% {
+        transform: scale(1) translatey(0);
+        opacity: 1;
+    }
 }
 
 .site-title {
@@ -108,6 +138,11 @@ a:hover{
     font-size: 2em;
     color: whitesmoke;
     margin-bottom: 1.5em;
+}
+
+.fundo-sec {
+    background-image: url('../img/fundo-b.jpg');
+    background-size: cover;
 }
 
 .portifolio {
@@ -157,6 +192,11 @@ a:hover{
     object-fit: cover;
     object-position: left bottom;
     border-radius: 2%;
+    transition: transform 500ms;
+}
+
+.img-portfolio:hover {
+    transform: scale(1.1) rotate(-1deg);
 }
 
 @media (min-width: 1000px) {
@@ -168,10 +208,11 @@ a:hover{
 
 .menu a {
     display: block;
-    padding: 10px 60px;
+    padding: 10px 40px;
     transition: background-color .25s, color .3s;
 }
 
+.menu a:active,
 .menu a:hover{
     background-color: teal;
     color: whitesmoke;
@@ -180,13 +221,15 @@ a:hover{
 
 .contato a {
     color: whitesmoke;
-    font-size: 4em;
+    font-size: 5em;
+    transition: text-shadow 500ms;
 }
 
 .contato .icons {
     text-align: center;
 }
 
+.contato a:active,
 .contato a:hover {
     text-decoration: none;
     text-shadow: 0px 0px 10px yellow;
