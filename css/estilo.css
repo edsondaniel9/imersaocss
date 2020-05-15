@@ -15,8 +15,9 @@ font-family: 'Source Code Pro', monospace;
 }
 
 body{
-    background-image: url('../img/fundo.jpg');
+    background-image: url('../img/fundo-b.jpg');
     background-size: cover;
+    background-color: whitesmoke;
     font-family: 'Source Code Pro', monospace;
     font-size: 12px;
 }
@@ -36,11 +37,29 @@ body{
 }
 
 header {
+    background-image: url('../img/fundo.jpg');
+    background-size: cover;
     height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
 }
+
+
+.title-box {
+    /* Opacidade para o fundo*/
+    background-color: rgba(0,0,0, 0.4);
+    border-bottom: 1px solid #1f1f1f;
+
+    /* Alinhamento */
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    height: 100vh;
+    width: 100vw;
+}
+
 
 .menu{
     background-color: white;
@@ -73,20 +92,6 @@ a:hover{
     text-align: center;
 }
 
-.title-box {
-    /* Opacidade para o fundo*/
-    background-color: rgba(0,0,0, 0.5);
-    /* border: 0px solid #f1f1f1;*/
-
-    /* Alinhamento */
-    align-items: center;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    height: 100vh;
-    width: 100vw;
-}
-
 .site-title {
     font-size: 4em;
     font-family: 'Source Code Pro', monospace;
@@ -97,6 +102,7 @@ a:hover{
     font-style: italic;
 }
 
+.contato h2,
 .portifolio h2 {
     font-family: 'Press Start 2P', cursive;
     font-size: 2em;
@@ -105,13 +111,21 @@ a:hover{
 }
 
 .portifolio {
-    background-color: rgba(31, 34, 43, 0.212);
+    background-color: rgba(10, 10, 10, 0.5);
+    border-bottom: 1px solid #1f1f1f;
     color: whitesmoke;
-    height: 100vh;
-    /*margin-top: 0.5em;
-    margin-bottom: 0.5em;*/
+    min-height: 100vh;
     padding: 2em;
 }
+
+.contato {
+    background-color: rgba(10, 10, 10, 0.8);
+    border-bottom: 1px solid #1f1f1f;
+    color: whitesmoke;
+    min-height: 5vh;
+    padding: 2em;
+}
+
 
 .portifolio .grid {
     display: grid;
@@ -154,5 +168,27 @@ a:hover{
 
 .menu a {
     display: block;
-    padding: 10px 40px;
+    padding: 10px 60px;
+    transition: background-color .25s, color .3s;
+}
+
+.menu a:hover{
+    background-color: teal;
+    color: whitesmoke;
+    text-decoration: none;
+}
+
+.contato a {
+    color: whitesmoke;
+    font-size: 4em;
+}
+
+.contato .icons {
+    text-align: center;
+}
+
+.contato a:hover {
+    text-decoration: none;
+    text-shadow: 0px 0px 10px yellow;
+
 }
