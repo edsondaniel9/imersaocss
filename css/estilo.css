@@ -132,19 +132,12 @@ a:hover{
     font-style: italic;
 }
 
-.contato h2,
-.portifolio h2 {
-    font-family: 'Press Start 2P', cursive;
-    font-size: 2em;
-    color: whitesmoke;
-    margin-bottom: 1.5em;
-}
-
 .fundo-sec {
     background-image: url('../img/fundo-b.jpg');
     background-size: cover;
 }
 
+.sobre,
 .portifolio {
     background-color: rgba(10, 10, 10, 0.5);
     border-bottom: 1px solid #1f1f1f;
@@ -154,13 +147,20 @@ a:hover{
 }
 
 .contato {
-    background-color: rgba(10, 10, 10, 0.8);
+    background-color: rgba(49, 48, 48, 0.9);
     border-bottom: 1px solid #1f1f1f;
     color: whitesmoke;
     min-height: 5vh;
     padding: 2em;
 }
 
+@media (min-width: 1200px){
+    .container {
+        max-width: 1200px;
+        margin-right: auto;
+        margin-left: auto;
+    }
+}
 
 .portifolio .grid {
     display: grid;
@@ -182,13 +182,29 @@ a:hover{
     }
 }
 
+.sobre h2,
+.contato h2,
+.portifolio h2 {
+    font-family: 'Press Start 2P', cursive;
+    font-size: 2em;
+    color: whitesmoke;
+    margin-bottom: 1.5em;
+}
+
+.sobre p{
+    color: white;
+    margin-bottom: 1.4em;
+    text-align: justify;
+    text-indent: 2em;
+}
+
 .portifolio figure{
     text-align: center;
 }
 
 .img-portfolio {
     height: 180px;
-    width: 240px;
+    width: 100%;
     object-fit: cover;
     object-position: left bottom;
     border-radius: 2%;
@@ -202,10 +218,40 @@ a:hover{
 @media (min-width: 1000px) {
     .img-portfolio {
         height: 220px;
-        width: 280px;
+        width: 100%;
     }
 }
 
+/* Rotacao dos cards 
+.flip-card {
+    perspective: 500px;
+}
+
+.card{
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform 5s;
+}
+
+.flip-card:hover, .card {
+    transform: rotateY(180deg);
+}
+
+.card-back{
+    background-color: goldenrod;
+    height: 180px;
+    width: 100%;
+    transform: rotateY(180deg);
+}
+
+.card-front, 
+.card-back {
+    backface-visibility: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+*/
 .menu a {
     display: block;
     padding: 10px 40px;
@@ -234,4 +280,25 @@ a:hover{
     text-decoration: none;
     text-shadow: 0px 0px 10px yellow;
 
+}
+
+.sobre a {
+    color: white;
+    text-decoration: underline;
+}
+
+.sobre a:hover {
+    background-color: dodgerblue;
+    text-decoration: none;
+}
+
+.sobre .avatar{
+    clip-path: polygon(25% 0%, 93% 0, 93% 100%, 25% 100%, 0% 50%);
+    margin-left: 2em;
+}
+
+@media (min-width: 600px){
+    .sobre .avatar{
+        float: right;
+    }    
 }
